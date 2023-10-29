@@ -13,7 +13,7 @@ function App() {
     <>
     <TodoContext.Provider value={{todos, setTodos}}>
       <AddTodo />
-      <TodoList todos={todos} setTodos={setTodos}/>
+      <TodoList />
     </TodoContext.Provider>
     </>
   )
