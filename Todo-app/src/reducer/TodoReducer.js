@@ -1,4 +1,4 @@
-function TodoReducer(state , action){
+function TodoReducer(state = [] , action){
 
     if(action.type == 'add_todo'){
         let nextId = state.length + 1;

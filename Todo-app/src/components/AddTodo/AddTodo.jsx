@@ -1,9 +1,10 @@
-import { useContext, useState } from "react";
-import TodoContext from "../../context/TodoContext";
+import { useState } from "react";
+import {useDispatch } from 'react-redux';
+import "./AddTodo.css";
 
 function AddTodo(){
 
-    const {todos , dispatch } = useContext(TodoContext);
+    const dispatch = useDispatch();
 
     const [todoText, setTodoText] = useState('');
 
@@ -14,7 +15,7 @@ function AddTodo(){
     return (
         <>
         <input placeholder="write about your todo..." onChange={(e) => setTodoText(e.target.value)} value={todoText} />
-       <button onClick={() => {
+       <button className="submit-btn" onClick={() => {
         if(todoText != ''){
             addTodo(todoText)
             setTodoText('');
